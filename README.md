@@ -38,3 +38,16 @@ Morning Briefing Script
    ```bash
    python src/main.py
    ```
+
+
+## Current Features
+- Fetches weather data from WeatherAPI
+- Fetches news headlines from YLE teletext API
+
+Current Output Example:    
+![example_output_picture](assets/example_output.png)
+
+## Future Improvements
+- Add Telegram/Slack integration for notifications
+- Host on a server and schedule daily runs (e.g., using cron jobs)
+- Add more data sources (e.g., calendar events, emails, inspirational quotes etc.)
