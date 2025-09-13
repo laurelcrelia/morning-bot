@@ -31,7 +31,7 @@ def get_news(page, numbers):
                     for entry in line:
                         if int(entry.get("number")) > 4: 
                             text = entry.get("Text", "").strip()
-                            if used_numbers == numbers:
+                            if used_numbers == numbers or text[:3] in [str(num) for num in used_numbers]:
                                 break
                             if text[:3] in [str(num) for num in numbers]:
                                 articles.append(text[4:].strip())
@@ -41,8 +41,9 @@ def get_news(page, numbers):
         raise NewsAPIError(str(e))
 
 def get_domestic_news():
-    return get_news(page=102, numbers=[103, 104, 105, 106, 107, 108, 109])
+    numbers = list(range(103, 130))
+    return get_news(page=102, numbers=numbers)
 
 def get_international_news():
-    return get_news(page=130, numbers=[131, 132, 133, 134, 135, 136, 137, 138, 139, 140])
-
+    numbers = list(range(131, 160))
+    return get_news(page=130, numbers=numbers)
