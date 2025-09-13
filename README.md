@@ -31,7 +31,15 @@ Morning Briefing Script
    - Create a `.env` file in the root directory
    - Add your API keys and configurations, e.g.:
      ```
-     WEATHER_API_KEY=your_weather_api_key
+     # ------- Weather -------
+      WEATHER_API_KEY=your_weather_api_key
+
+      # ------- News -------
+      YLE_API_ID=your_yle_api_id
+      YLE_API_KEY=your_yle_api_key
+      YLE_DOMESTIC_NEWS_PAGE="102"
+      YLE_INTERNATIONAL_NEWS_PAGE="130"
+      YLE_ECONOMY_NEWS_PAGE="160"
      ```
 
 6. Run the script
