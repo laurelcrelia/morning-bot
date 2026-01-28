@@ -5,6 +5,7 @@ import asyncio
 from dotenv import load_dotenv
 from telegram import Bot
 from telegram.error import TelegramError
+from telegram.constants import ParseMode
 
 load_dotenv()
 
@@ -18,7 +19,12 @@ async def _send_message_async(message: str) -> None:
         return
     
     bot = Bot(token=bot_token)
-    await bot.send_message(chat_id=chat_id, text=message)
+    # Send with Markdown formatting enabled
+    await bot.send_message(
+        chat_id=chat_id, 
+        text=message, 
+        parse_mode=ParseMode.MARKDOWN
+    )
 
 def send_telegram_message(message: str) -> None:
     """Send a message to Telegram using the configured bot.

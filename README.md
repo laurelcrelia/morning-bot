@@ -1,6 +1,17 @@
 # morning-bot
 Morning Briefing Script
 
+## Current Features
+- Fetches weather data from WeatherAPI
+- Fetches news headlines from YLE teletext API
+- Sends message to Telegram chat through a Telegram bot
+- Deployed to Google Cloud through Cloud Functions
+- Scheduled to run at 7 AM daily using Cloud Scheduler
+
+Output Example:    
+
+<img src="assets/example_output3.png" width="300" alt="example_output_picture">
+
 ## Pre-requisites
 - Python 3.8+
 
@@ -56,22 +67,6 @@ Want to set up scheduled deployment on Google Cloud? Follow the instructions in 
    ```
  > NOTE: There is another `main.py` for Google Cloud Functions deployment in root directory. However when running locally use `src/main.py`. The core logic is the same just that the entry point function is wrapped for Cloud Functions.
 
-## Current Features
-- Fetches weather data from WeatherAPI
-- Fetches news headlines from YLE teletext API
-- Sends message to Telegram chat
-- Deployed to Google Cloud
-- Scheduled to run at 7 AM daily
-
-Output Example:    
-
-<img src="assets/example_output2.png" width="300" alt="example_output_picture1">
-
-
-
-> NOTE: The picture below is of outdated version, current version sends the briefing via Telegram     
-
-<img src="assets/example_output.png" width="500" alt="example_output_picture2">
 
 
 ## Future Improvements
