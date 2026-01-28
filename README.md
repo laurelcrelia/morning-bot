@@ -71,5 +71,4 @@ Want to set up scheduled deployment on Google Cloud? Follow the instructions in 
 
 ## Future Improvements
 - Embed links to the full news articles that are in the briefing.
-- Make the message format more visually appealing (e.g., using Markdown or HTML formatting supported by Telegram).
 - Add more data sources (e.g., calendar events, emails, inspirational quotes etc.)
