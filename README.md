@@ -4,7 +4,11 @@ Morning Briefing Script
 ## Pre-requisites
 - Python 3.8+
 
-## Setup
+## Setup (locally runnable version)
+
+Here are the steps to set up and run the Morning Bot project locally.
+
+Want to set up scheduled deployment on Google Cloud? Follow the instructions in `gcloud_instructions.md`.
 
 1. Clone the repository:
    ```bash
@@ -32,34 +36,45 @@ Morning Briefing Script
    - Add your API keys and configurations, e.g.:
      ```
      # ------- Weather -------
-      WEATHER_API_KEY=your_weather_api_key
+      WEATHER_API_KEY=<your_weather_api_key>
 
       # ------- News -------
-      YLE_API_ID=your_yle_api_id
-      YLE_API_KEY=your_yle_api_key
+      YLE_API_ID=<your_yle_api_id>
+      YLE_API_KEY=<your_yle_api_key>
       YLE_DOMESTIC_NEWS_PAGE="102"
       YLE_INTERNATIONAL_NEWS_PAGE="130"
       YLE_ECONOMY_NEWS_PAGE="160"
 
       # ------- Telegram Bot -------
-      TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-      TELEGRAM_CHAT_ID=your_telegram_chat_id
+      TELEGRAM_BOT_TOKEN=<your_telegram_bot_token>
+      TELEGRAM_CHAT_ID=<your_telegram_chat_id>
      ```
 
 6. Run the script
    ```bash
    python src/main.py
    ```
-
+ > NOTE: There is another `main.py` for Google Cloud Functions deployment in root directory. However when running locally use `src/main.py`. The core logic is the same just that the entry point function is wrapped for Cloud Functions.
 
 ## Current Features
 - Fetches weather data from WeatherAPI
 - Fetches news headlines from YLE teletext API
-- Sends message via Telegram bot
+- Sends message to Telegram chat
+- Deployed to Google Cloud
+- Scheduled to run at 7 AM daily
 
-Current Output Example:    
-![example_output_picture](assets/example_output.png)
+Output Example:    
+
+<img src="assets/example_output2.png" width="300" alt="example_output_picture1">
+
+
+
+> NOTE: The picture below is of outdated version, current version sends the briefing via Telegram     
+
+<img src="assets/example_output.png" width="500" alt="example_output_picture2">
+
 
 ## Future Improvements
-- Host on a server and schedule daily runs (e.g., using cron jobs)
+- Embed links to the full news articles that are in the briefing.
+- Make the message format more visually appealing (e.g., using Markdown or HTML formatting supported by Telegram).
 - Add more data sources (e.g., calendar events, emails, inspirational quotes etc.)
