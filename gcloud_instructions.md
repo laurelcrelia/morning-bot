@@ -33,6 +33,7 @@ For this, you need to have a Google Cloud account.
    YLE_ECONOMY_NEWS_PAGE: "160"
    TELEGRAM_BOT_TOKEN: "<your_telegram_bot_token>"
    TELEGRAM_CHAT_ID: "<your_telegram_chat_id>"
+   USER_LOCATION: "<your_city>"
    ```
 
 6. Deploy to Google Cloud Functions (using Gen2 runtime)
