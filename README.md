@@ -40,6 +40,10 @@ Morning Briefing Script
       YLE_DOMESTIC_NEWS_PAGE="102"
       YLE_INTERNATIONAL_NEWS_PAGE="130"
       YLE_ECONOMY_NEWS_PAGE="160"
+
+      # ------- Telegram Bot -------
+      TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+      TELEGRAM_CHAT_ID=your_telegram_chat_id
      ```
 
 6. Run the script
@@ -51,11 +55,11 @@ Morning Briefing Script
 ## Current Features
 - Fetches weather data from WeatherAPI
 - Fetches news headlines from YLE teletext API
+- Sends message via Telegram bot
 
 Current Output Example:    
 ![example_output_picture](assets/example_output.png)
 
 ## Future Improvements
-- Add Telegram/Slack integration for notifications
 - Host on a server and schedule daily runs (e.g., using cron jobs)
 - Add more data sources (e.g., calendar events, emails, inspirational quotes etc.)

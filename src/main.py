@@ -2,8 +2,12 @@
 
 from utils import get_location
 from reporter import greet_user, report_weather, report_news
+from telegram_sender import send_telegram_message
 
 def main() -> None:
+    # Test Telegram integration
+    send_telegram_message("Hello World")
+    
     greet_user()
     print("\n")
     location = get_location()
