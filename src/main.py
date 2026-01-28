@@ -5,15 +5,15 @@ from reporter import greet_user, report_weather, report_news
 from telegram_sender import send_telegram_message
 
 def main() -> None:
-    # Test Telegram integration
-    send_telegram_message("Hello World")
+    greeting = greet_user()
     
-    greet_user()
-    print("\n")
     location = get_location()
-    report_weather(location)
-    print("\n")
-    report_news()
+    weather_report = report_weather(location)
+    
+    news_report = report_news()
+    
+    telegram_message = f"{greeting}\n\n{weather_report}\n\n{news_report}"
+    send_telegram_message(telegram_message)
 
 if __name__ == "__main__":
     main()
