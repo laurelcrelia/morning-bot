@@ -19,7 +19,7 @@ Output Example from my Telegram chat:
 
 Here are the steps to set up and run the Morning Bot project locally.
 
-Want to set up scheduled deployment on Google Cloud? Follow the instructions in `gcloud_instructions.md`.
+Want to set up scheduled deployment on Google Cloud? Follow the instructions in [gcloud_instructions.md](gcloud_instructions.md).
 
 1. Clone the repository:
    ```bash
