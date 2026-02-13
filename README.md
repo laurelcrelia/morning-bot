@@ -3,10 +3,10 @@ Morning Briefing Script. I use it daily to get a quick overview of the weather a
 
 ## Current Features
 - Scheduled to run at 7 AM daily using Cloud Scheduler
+- Deployed to Google Cloud through Cloud Functions
 - Fetches weather data from WeatherAPI
 - Fetches news headlines from YLE teletext API
 - Sends message to Telegram chat through a Telegram bot
-- Deployed to Google Cloud through Cloud Functions
 
 Output Example:    
 
