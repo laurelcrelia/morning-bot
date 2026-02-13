@@ -1,12 +1,12 @@
 # morning-bot
-Morning Briefing Script
+Morning Briefing Script. I use it daily to get a quick overview of the weather and news headlines in the morning.
 
 ## Current Features
+- Scheduled to run at 7 AM daily using Cloud Scheduler
 - Fetches weather data from WeatherAPI
 - Fetches news headlines from YLE teletext API
 - Sends message to Telegram chat through a Telegram bot
 - Deployed to Google Cloud through Cloud Functions
-- Scheduled to run at 7 AM daily using Cloud Scheduler
 
 Output Example:    
 
