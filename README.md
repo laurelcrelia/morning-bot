@@ -8,7 +8,7 @@ Morning Briefing Script. I use it daily to get a quick overview of the weather a
 - Fetches news headlines from YLE teletext API
 - Sends message to Telegram chat through a Telegram bot
 
-Output Example:    
+Output Example from my Telegram chat:  
 
 <img src="assets/example_output3.png" width="300" alt="example_output_picture">
 
